@@ -1,10 +1,13 @@
-name: 'Node 12 Template Action'
-description: 'Get started with Node actions'
-author: 'GitHub'
+name: "Action Build WordPress Project to Releases"
+description: "Action to build a Theme or Plugiin and get the finished result attached to the release assets on GitHub."
+author: "Fabian Kägy"
 inputs:
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  ignore:
+    description: "Comma Sepperated list of files to ignore. E.g. 'node_modules, build/index.js'"
+    default: ""
+  GITHUB_PERSONAL_ACCESS_TOKEN:
+    description: "GitHub Personal Access Token to be able to get your files and create the release."
+    required: true
 runs:
-  using: 'node12'
-  main: 'lib/main.js'
+  using: "node12"
+  main: "index.js"

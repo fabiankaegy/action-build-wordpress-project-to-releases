@@ -1,33 +1,56 @@
 {
-  "name": "node12-template-action",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Node 12 template action",
-  "main": "lib/main.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/actions/javascript-template.git"
-  },
-  "keywords": [
-    "actions",
-    "node",
-    "setup"
-  ],
-  "author": "GitHub",
-  "license": "MIT",
-  "dependencies": {
-    "@actions/core": "^1.0.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "@types/node": "^12.0.4",
-    "jest": "^24.8.0",
-    "jest-circus": "^24.7.1",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.5.1"
-  }
+	"name": "action-build-wordpress-project-to-releases",
+	"version": "0.0.0",
+	"private": true,
+	"description": "Node 12 template action",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "jest",
+		"test:watch": "jest --watchAll"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/actions/javascript-template.git"
+	},
+	"keywords": [
+		"actions",
+		"node",
+		"setup"
+	],
+	"author": "fabiankaegy",
+	"license": "MIT",
+	"dependencies": {
+		"@actions/core": "^1.0.0",
+		"@actions/exec": "^1.0.0",
+		"@actions/github": "^1.0.1",
+		"@actions/io": "^1.0.0",
+		"@babel/polyfill": "^7.4.4",
+		"fs": "0.0.1-security",
+		"path": "^0.12.7",
+		"zip-that": "^1.2.0"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.5.5",
+		"jest": "^25.0.0"
+	},
+	"babel": {
+		"presets": [
+			[
+				"@babel/preset-env"
+			]
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
